@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>shop.html</title>
+<style>
+    body {
+        background-image: linear-gradient(blue,lightblue);
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .product {
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 50px;
+    }
+    .total {
+        text-align: right;
+        font-size: 18px;
+        font-weight: bold;
+    }
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: white;
+}
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+.col-25 {
+  -ms-flex: 25%;
+  flex: 25%;
+}
+.col-50 {
+  -ms-flex: 50%; 
+  flex: 50%;
+}
+.col-75 {
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+.container {
+  background-color:blue;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+span.price {
+  float: right;
+  color: black;
+}
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+          <img src="Recycling T-shirt .jpeg" alt="Recylic T-shirt" width="200" height="200">
+          <h1>Recycle T-shirt</h1>
+        <p>price £12.99</p>
+  <p><button>Add to Cart</button></p>
+  <p><button>Select colour</button></p>
+        <form action="/action_page.php">
+        </select>
+        <br><br>
+    </form>
+        </form>
+        </div>
+        <div class="column">
+          <img src="T-shirt-wind  turbine.jpeg" alt="wind turbine" width="200" height="200">
+          <h1>T-shirt with windmill inprinted</h1>
+      <p>price: :£12.99</p>
+  <p><button>Add to Cart</button></p>
+  <p><button>Select colour</button></p>
+      <form action="/action_page.php">
+      </select>
+      <br><br>
+    </form>
+        </div>
+        <div class="column">
+          <img src="s.jpeg" alt="Solarpanel:T-shirt" width="200" height="200">
+          <h1>Solar pannel T-shirt</h1>
+          <p>price:£12.99</p>
+  <p><button>Add to Cart</button></p>
+  <p><button>Select colour</button></p>
+          <form action="/action_page.php">
+          </select>
+    <div class="container">
+        <h1>Your Basket</h1>
+        <div class="product">
+            <h2> recyling T-shirt - £12.99 each</h2>
+            <label for="quantity1">Quantity:</label>
+            <input type="number" id="quantity1" min="0" value="0">
+        </div>
+        <div class="product">
+            <h2>Windmill T-shirt - £12.99 each</h2>
+            <label for="quantity2">Quantity:</label>
+            <input type="number" id="quantity2" min="0" value="0">
+        </div>
+        <div class="product">
+            <h2>Solar T-shirt - £12.99 each</h2>
+            <label for="quantity3">Quantity:</label>
+            <input type="number" id="quantity3" min="0" value="0">
+        </div>
+        <div class="total">Total: $<span id="total">0</span></div>
+    </div>
+    <script>
+        function calculateTotal() {
+            var quantity1 = parseInt(document.getElementById('quantity1').value);
+            var quantity2 = parseInt(document.getElementById('quantity2').value);
+            var quantity3 = parseInt(document.getElementById('quantity3').value);
+
+            var total = quantity1 * 10 + quantity2 * 15 + quantity3 * 20;
+            document.getElementById('total').textContent = total;
+        }
+        document.getElementById('quantity1').addEventListener('input', calculateTotal);
+        document.getElementById('quantity2').addEventListener('input', calculateTotal);
+        document.getElementById('quantity3').addEventListener('input', calculateTotal);
+    </script>
+    <form>
+      ...
+      <fieldset>
+        <legend>Personal Details:</legend>
+        <label for="name"> Name on card:</label><br>
+        <input type="text" name="Name on card" id="Name on card"><br>        
+        <label for="email">number on Card:</label><br>
+        <input type="email" name="email" id="email"><br>       
+        <label for="CVV">CVV: </label>
+        <input type="CVV" name="CVV" id="CVV"><br>      
+        <label for="exp month">Exp month:</label>
+        <input type="exp month" name="exp month" id="exp month">
+        <label for="exp month">Exp year:</label>
+        <input type="exp year" name="exp year" id="exp year">
+        <input type="submit" value="Submit">
+        <form>
+
+      </fieldset>
+</body>
+</html>

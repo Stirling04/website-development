@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splash Screen</title>
+  <style>
+      body{background-color:black;
+    }
+    img {
+  border-radius: 50%;
+    }
+    .fade-in-out {
+  animation: fadeInOut 4s infinite; 
+}
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 1; 
+  }
+  50% {
+    opacity: 0; 
+  }
+}
+splash.display-none{
+  opacity: 0;
+  z-index: -10;
+}
+    .splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  var splashScreen = document.getElementById("splashScreen");
+  var content = document.getElementById("content");
+  setTimeout(function() {
+    splashScreen.style.display = "none"; 
+    content.style.display = "flex";
+  }, 4000); 
+});
+    </script>
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash"></div>
+    <div class="splash"></div>
+    <center>
+    <h1 class="fade-in">Welcome to a Sustainable life!</h1>
+          <img src="UN_emblem_blue.jpg .png " alt = "Image" height ="500" width ="500"
+          style ="border: 10px solid black">
+          <p style="color:aquamarine;">Group Members: Stirling, Amani, Faaizah & Lamia</p>
+    <p style ="color:red;">Our Mission:To make a safer world for all!</p>
+    <progress id="progress-bar" aria-label="Content loading…"></progress>
+    <div aria-busy="true" aria-describedby="progress-bar">
+</body>
+</html>
